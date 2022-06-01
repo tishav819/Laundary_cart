@@ -8,7 +8,7 @@ const ordersSchema = new Schema({
         ref: 'user'
     },
   
-  shippingInfo: {
+  shippingInfo: [{
         userAddress: {    // shipping info
           type: String,
         },
@@ -18,7 +18,8 @@ const ordersSchema = new Schema({
         storephone: {
           type: Number,
         },
-      },
+      }
+      ],
       totalPrice:{     // price info
         type:Number
       },

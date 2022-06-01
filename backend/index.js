@@ -18,6 +18,11 @@ app.use(cors())
 app.use(express.json())
 
 
+//user routes
+app.use( require("./routes/auth"))
+
+//orders routes
+app.use("/orderdetail" ,require("./routes/orders"))
 
 
 const PORT= 5000
@@ -26,3 +31,4 @@ const PORT= 5000
 app.listen(PORT,()=>{
     console.log("app is listing at port 5000");
 })
+
